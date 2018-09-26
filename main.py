@@ -138,7 +138,7 @@ class C_Object:
                 if len(self_color) == len(obj_color):
                     candidate = True
                     for i in range(len(self_color)):
-                        if abs(self_color[i] - obj_color[i]) <= 15:
+                        if abs(self_color[i] - obj_color[i]) > 15:
                             candidate = False
                             break
                     if candidate:
@@ -149,7 +149,7 @@ class C_Object:
                     if len(self_color) == obj_size-1:
                         candidate = True
                         for i in range(len(self_color)):
-                            if abs(self_color[i] - (obj_color[i] + (obj_color[-1]/obj_size-1))) <= 15:
+                            if abs(self_color[i] - (obj_color[i] + (obj_color[-1]/obj_size-1))) > 15:
                                 candidate = False
                                 break
                         if candidate:
